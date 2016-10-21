@@ -23,7 +23,7 @@ public class InventoryManager {
 			
 			
 			 JSONArray data = (JSONArray) object.get("data");
-			 String[] str = {"rice","pulses","weats"};
+			 String[] str = {"rice","pulses","wheats"};
 			 /*
 			  * To read the .json file content i.e Object and each Object [name,values]
 			  * */
