@@ -1,0 +1,19 @@
+{
+  "data":[
+      {"rice":[
+       {"name":"karavali","weight":"5","price":"10"},
+       {"name":"Jasmine","weight":"4","price":"20"},
+       {"name":"grain","weight":"7","price":"27"}
+        ]},
+      {"pulses":[
+        {"name":"Faba beans","weight":"2","price":"50"},
+        {"name":"Chick peas","weight":"1","price":"35"},
+        {"name":"pigeon peas","weight":"3","price":"50"}
+      ]},
+       {"wheats":[
+       {"name":"Spelt","weight":"4","price":"65"},
+       {"name":"Emmer","weight":"7","price":"35"},
+       {"name":"einkorn","weight":"6","price":"55"}
+        ]}
+  ]
+}
