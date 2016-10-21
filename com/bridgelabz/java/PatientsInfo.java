@@ -77,7 +77,7 @@ class PatientsInfo{
 			}
 		}
 		if(count==0)
-			System.out.println("Sorry Patient for given name not found");
+			System.out.println("Patient for given name not found");
 	}//end method
 
 	//searching for id
@@ -90,7 +90,7 @@ class PatientsInfo{
 			}
 		}
 		if(count==0)
-			System.out.println("Sorry Patient for given id not found");
+			System.out.println("Patient for given id not found");
 	}
 
 	//searching for number
