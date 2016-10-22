@@ -90,7 +90,7 @@ class DoctorsInfo{
 			}
 		}
 		if(count==0)
-			System.out.println("Sorry Doctor for given Name not found");
+			System.out.println("Doctor for given Name not found");
 	}
 
 	//searching doctor by mId
