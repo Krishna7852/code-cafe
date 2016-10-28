@@ -2,12 +2,11 @@
 * @Author:Dhareppa Metri
 * File:CrossGame.java
 * Date:24/10/2016
-* Purpose:Program to play a Cross Game or Tic-Tac-Toe Game. Player 1 is the Computer and the Player 2 is the user.
+* Program:Program to play a Cross Game or Tic-Tac-Toe Game. Player 1 is the Computer and the Player 2 is the user.
 * Player 1 take Random Cell that is the Column and Row. 
-.
 **/
-import com.bridgelabz.java.CrossGame;
 import java.util.Scanner;
+import java.util.Random;
 public class CrossGame
 {
     private int counter;
@@ -28,6 +27,9 @@ public class CrossGame
         
         
     }
+    /*
+     * This method is used to draw the new board.
+     **/
     public  void newBoard()
     {
         
@@ -40,6 +42,9 @@ public class CrossGame
         
         
     }
+    /*
+     * This method is used to display the current board status.
+     **/
     public  String currentBoard()
     {
         System.out.println( "\n\n" );
@@ -56,7 +61,9 @@ public class CrossGame
         System.out.println(  "\n\n" );
         return "currentBoard";
     }
-    
+    /*
+     * This method is used to play the cross game.
+     **/
     public  void play()
     {
         int spot;
@@ -64,29 +71,34 @@ public class CrossGame
         
         System.out.println(  "Player " + getPlayer() +" will go first and be the letter 'X'" );
         
-        do {
+        do{
             currentBoard();              // display current board
             
             System.out.println(  "\n\n Player " + getPlayer() +" choose a posn." );
-            
             boolean posTaken = true;
-            while (posTaken) {
-               
+              while (posTaken){
+                if(getPlayer()=='X'){
                 Scanner in =new Scanner (System.in);
                 spot=in.nextInt();
-                posTaken = checkPosn(spot);
+              }
+                else{
+                Random m=new Random();
+                spot = m.nextInt(9);
+              }
+				posTaken = checkPosn(spot);
                 if(posTaken==false)
                 posn[spot]=getPlayer();
-            }
+        }
             
             System.out.println(  "Nice move." );
-            
             currentBoard();              // display current board
-            
             nextPlayer();
         }while ( checkWinner() == blank );
         
     }
+    /*
+     * This method is used to check the winner of the game.
+     **/
     
     public  char checkWinner()
     {
@@ -102,7 +114,8 @@ public class CrossGame
         if (posn[1] == 'X' && posn[5] == 'X' && posn[9] == 'X') Winner = 'X';
         if (posn[3] == 'X' && posn[5] == 'X' && posn[7] == 'X') Winner = 'X';
         if (Winner == 'X' )
-        {System.out.println("Player1 wins the game." );
+        {
+			System.out.println("Player1 wins the game." );
             return Winner;
         }
         
@@ -140,6 +153,9 @@ public class CrossGame
         
         return Winner;
     }
+    /*
+     * This method is used to check board position.
+     **/
     
     public  boolean checkPosn(int spot)
     {
@@ -156,6 +172,9 @@ public class CrossGame
         
        
     }
+   /*
+     * This method is used to get the next player.
+     **/
     
     public  void nextPlayer()
     {
@@ -164,12 +183,16 @@ public class CrossGame
         else player = 'X';
         
     }
-    
+    /*
+     * This method is used to display title.
+     **/
     public String getTitle()
     {
         return "Cross Game" ;
     }
-    
+   /*
+     * This method is used to get the current player.
+     **/   
     public  char getPlayer()
     {
         return player;
